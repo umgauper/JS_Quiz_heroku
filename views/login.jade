@@ -1,0 +1,21 @@
+extends layout
+block content
+    div.container
+        div.col-sm-6.col-sm-offset-3
+           h1.form-headline Login
+           if message.length > 0
+               div.alert.alert-danger= message
+           form(action='/login' method='post')
+               div.form-group
+                   label Username
+                   input.form-control(type='text' name='username')
+               div.form-group
+                   label Password
+                   input.form-control(type='password' name='password')
+               button.btn.btn-warning.btn-lg(type='submit') Login
+
+           p Need an account?
+               a(href='/signup')  Signup
+           p Or go
+               a(href='/')  Home
+

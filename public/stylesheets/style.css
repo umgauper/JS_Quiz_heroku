@@ -1,0 +1,113 @@
+body {
+  background: url('../images/green_cup.png');
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+form {
+  background-color: white;
+  padding: 20px;
+  border: 10px solid transparent;
+  border-radius: 10px;
+  border-top-left-radius: 0px;
+  margin-bottom: 10px;
+}
+
+.form-headline {
+  background-color: #EDECD0;
+  border: 10px solid transparent;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  margin-bottom: 0;
+  display: inline-block;
+}
+
+/* quiz styles */
+
+div.quiz {
+  background-color: white;
+  border: 10px outset transparent;
+  border-radius: 10px;
+}
+
+.quiz hr {
+  height: 10px;
+}
+
+#error {
+  display: none;
+  margin-top: 5%;
+}
+
+.vis-hidden {
+  visibility: hidden;
+}
+
+h4.question {
+  height: 30px;
+}
+
+input[type="radio"] {
+  margin-right: 10px !important;
+}
+
+.quiz p {
+  text-align: right;
+}
+
+div.answers input {
+  margin-left: 10%;
+}
+
+.prev, .next, .calculate {
+  color: white;
+  font-weight: bold;
+}
+
+.prev, .next {
+  background-color: #426A3E;
+  margin-top: 150px;
+  height: 50px;
+  width: 5px;
+}
+
+.prev {
+  position: absolute;
+  margin-left: 80%;
+  z-index: 10000;
+}
+
+.next {
+  margin-left: -80%;
+}
+
+.calculate {
+  background-color: #EF5B00;
+  margin-top: 10%;
+}
+
+/* Rankings Styles */
+
+table {
+  margin-top: 10%;
+  background-color: white !important;
+  border-radius: 10px;
+}
+
+thead {
+  background-color: #4F633D;
+  font-size: 150%;
+}
+
+tbody {
+  font-size: 110%;
+}
+
+td.score {
+  font-weight: bold;
+  /*text-align: center;*/
+}

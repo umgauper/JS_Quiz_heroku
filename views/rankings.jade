@@ -1,0 +1,16 @@
+extends layout
+block content
+    div.container
+        div.row
+            div.col-sm-12
+        div.row
+            div.col-sm-8.col-sm-offset-2
+                table.table
+                        thead
+                            th User
+                            th Score
+                        tbody
+                            each val in doc
+                                tr
+                                    td= val.local.username
+                                    td.score= val.local.score

@@ -1,0 +1,39 @@
+//
+   Created by una on 3/26/15.
+extends layout
+
+block content
+   div.container(ng-controller='quizController')
+         //div.col-sm-6.col-sm-offset-3
+         div.row
+            div.col-sm-1.col-sm-offset-2
+               button.btn.prev(ng-class="{'vis-hidden': i === 0 || i === questionSets.length}" ng-click='prev()') <<
+            div.col-sm-6
+              div.quiz
+                 h4.question(ng-show="i < questionSets.length") {{ questionSets[i].question }}
+                 hr
+                 div.answers(ng-show="i < questionSets.length")
+                     //did not use ng-repeat here because of difficulty using ng-value to force check previously stored answers
+                     div.form-group
+                        input(name='choice' type='radio' value='0')
+                        label {{questionSets[i].answers[0]}}
+                     div.form-group
+                        input(name='choice' type='radio' value='1')
+                        label {{questionSets[i].answers[1]}}
+                     div.form-group
+                        input(name='choice' type='radio' value='2')
+                        label {{questionSets[i].answers[2]}}
+                     div.form-group
+                        input(name='choice' type='radio' value='3')
+                        label {{questionSets[i].answers[3]}}
+                     p {{i}}/{{questionSets.length}}
+             div.col-sm-1
+                  button.btn.next(ng-show='i < questionSets.length-1;' ng-click='next()') >>
+
+          div.row
+              div.col-sm-2.col-sm-offset-5
+                button.btn.calculate(ng-show='i  === questionSets.length-1' ng-click='calculateScore()') CALCULATE
+          div.row
+              div.col-sm-4.col-sm-offset-4
+                div#error.alert.alert-danger Choose an answer!
+
